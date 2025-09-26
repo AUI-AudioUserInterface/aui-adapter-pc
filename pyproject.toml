@@ -12,8 +12,17 @@ requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [{ name = "AUI AudioUserInterface" }]
 
+dependencies = [
+    "aui-common>=0.1.0",
+    "sounddevice>=0.5.2",
+    "numpy>=2.0",
+    "pygame>=2.6"
+]
+
 [project.entry-points."aui.adapters"]
+
 pc = "aui_adapter_pc:PcAdapter"
+
 
 [tool.setuptools.packages.find]
 where = ["src"]
